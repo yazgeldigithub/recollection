@@ -8,16 +8,18 @@ import userRouter from "./routes/user.js";
 
 const app = express();
 
-//Every route inside of the postRoutes is gonna start with posts
-app.use("/posts", postRoutes);
-
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 
 app.use(cors());
 
+//Every route inside of the postRoutes is gonna start with posts
 app.use("/posts", postRoutes);
 app.use("/user", userRouter);
+
+app.get("/", (req, res) => {
+  res.send("App is running");
+});
 
 const CONNECTION_URL =
   "mongodb+srv://yazgeldi:LastKing95@cluster0.tzetc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
