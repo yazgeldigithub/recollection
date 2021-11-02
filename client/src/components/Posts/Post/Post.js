@@ -8,16 +8,16 @@ import {
   Typography,
   ButtonBase,
 } from "@material-ui/core/";
-import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
-import DeleteIcon from "@material-ui/icons/Delete";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import ThumbUpAltOutlined from "@material-ui/icons/ThumbUpAltOutlined";
+import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
+import DeleteIcon from "@mui/icons-material/Delete";
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import ThumbUpAltOutlined from "@mui/icons-material/ThumbUpAlt";
 import { useDispatch } from "react-redux";
 import moment from "moment";
 import { useHistory } from "react-router-dom";
 
 import { likePost, deletePost } from "../../../actions/posts";
-import useStyles from "./styles";
+import useStyles from "./style";
 
 const Post = ({ post, setCurrentId }) => {
   const user = JSON.parse(localStorage.getItem("profile"));

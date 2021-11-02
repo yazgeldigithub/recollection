@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 
 import Icon from "./icon";
 import { signin, signup } from "../../actions/auth";
